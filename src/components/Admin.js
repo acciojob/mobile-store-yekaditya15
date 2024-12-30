@@ -41,15 +41,17 @@ function Admin() {
   return (
     <div>
       <h2>Admin Panel</h2>
-      <ul>
+      <div className="col-12">
         {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.price}
+          <div className="row" key={product.id}>
+            <a href="#" className="col">
+              {product.name} - {product.price}
+            </a>
             <button onClick={() => editProduct(product.id)}>Edit</button>
             <button onClick={() => deleteProduct(product.id)}>Delete</button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <h3>Add New Product</h3>
       <form onSubmit={addProduct}>

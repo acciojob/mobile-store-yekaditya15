@@ -14,7 +14,9 @@ function Home() {
       <ul>
         {initialProducts.map((product) => (
           <li key={product.id}>
-            <Link to={`/products/${product.id}`}>{product.name}</Link>
+            <Link to={`/products/${product.id}`} className="btn">
+              {product.name}
+            </Link>
           </li>
         ))}
       </ul>
